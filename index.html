@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="dashboard-header">
+    <div class="greeting">
+      <h1 id="greeting-text">Hello</h1>
+      <time id="clock" class="clock notranslate" aria-live="polite" translate="no">--:--:--</time>
+    </div>
+    <div class="header-controls">
+      <button id="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+        <span id="theme-icon">🌙</span>
+      </button>
+      <button id="settings-open" type="button" aria-label="Open settings">
+        ⚙️
+      </button>
+    </div>
+  </header>
+
+  <main class="dashboard-main">
+    <!-- Focus Timer (Pomodoro) -->
+    <section class="focus-timer" aria-labelledby="focus-timer-title">
+      <h2 id="focus-timer-title">Focus Timer</h2>
+      <p id="timer-mode" class="timer-mode">Work</p>
+      <p id="timer-display" class="timer-display notranslate" aria-live="off" translate="no">25:00</p>
+      <div class="timer-controls">
+        <button id="timer-start" type="button">Start</button>
+        <button id="timer-pause" type="button">Pause</button>
+        <button id="timer-reset" type="button">Reset</button>
+      </div>
+    </section>
+
+    <!-- To-Do -->
+    <section class="todo-section" aria-labelledby="todo-title">
+      <div class="todo-header">
+        <h2 id="todo-title">To-Do</h2>
+        <button id="todo-clear-all" type="button" class="clear-all-btn" disabled>Clear All</button>
+      </div>
+      <form id="todo-form" class="todo-form">
+        <label for="todo-input" class="visually-hidden">Add a new task</label>
+        <input
+          type="text"
+          id="todo-input"
+          name="todo"
+          placeholder="Add a new task..."
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="todo-list" class="todo-list" aria-label="Task list"></ul>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links" aria-labelledby="quick-links-title">
+      <h2 id="quick-links-title">Quick Links</h2>
+      <nav class="links-nav" aria-label="Quick links">
+        <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://mail.google.com" target="_blank" rel="noopener noreferrer">Gmail</a>
+      </nav>
+    </section>
+  </main>
+
+  <!-- Settings Dialog -->
+  <dialog id="settings-dialog" class="settings-dialog" aria-labelledby="settings-title">
+    <form id="settings-form" method="dialog">
+      <h2 id="settings-title">Settings</h2>
+
+      <div class="form-field">
+        <label for="name-input">Your Name</label>
+        <input
+          type="text"
+          id="name-input"
+          name="name"
+          placeholder="Enter your name"
+          autocomplete="name"
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="pomodoro-duration">Pomodoro Duration (minutes)</label>
+        <input
+          type="number"
+          id="pomodoro-duration"
+          name="pomodoro"
+          min="1"
+          max="120"
+          step="1"
+          value="25"
+          required
+        />
+      </div>
+
+      <div class="settings-controls">
+        <button id="settings-save" type="submit">Save</button>
+        <button id="settings-close" type="button">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <footer class="dashboard-footer">
+    <p>Life Dashboard</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
