@@ -111,7 +111,7 @@
      ---------------------------------------------------------------------- */
   const DEFAULT_LINKS = [
     { name: 'Google', url: 'https://www.google.com' },
-    { name: 'GitHub', url: 'https://github.com' },
+    { name: 'Instagram', url: 'https://www.instagram.com' },
     { name: 'YouTube', url: 'https://www.youtube.com' },
     { name: 'Gmail', url: 'https://mail.google.com' }
   ];

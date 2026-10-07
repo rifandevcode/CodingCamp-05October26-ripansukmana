@@ -13,7 +13,7 @@ Life Dashboard is a responsive, browser-based personal productivity dashboard. I
 - Pomodoro focus timer with Start, Pause, and Reset.
 - Configurable Pomodoro duration (integer 1–120 minutes; the presets 15, 25, 45, and 60 minutes are all supported).
 - To-do list with add, inline edit (double-click), complete, and delete, plus a "Clear All" action with confirmation.
-- Quick Links: four default links (Google, GitHub, YouTube, Gmail) seeded on first load, with the ability to add custom links and remove any link.
+- Quick Links: four default links (Google, Instagram, YouTube, Gmail) seeded on first load, with the ability to add custom links and remove any link.
 - Settings dialog to set the custom name and the Pomodoro duration.
 - Local Storage persistence for name, theme, Pomodoro duration, to-dos, and quick links.
 - Responsive layout for desktop, tablet, and mobile with no horizontal overflow.
